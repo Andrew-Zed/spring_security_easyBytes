@@ -2,6 +2,7 @@ package com.andrew.springsecurity.controller;
 
 import com.andrew.springsecurity.model.Contact;
 import com.andrew.springsecurity.repositories.ContactRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
@@ -10,7 +11,7 @@ import java.util.Random;
 @RestController
 @RequestMapping
 public class ContactController {
-
+    @Autowired
     private ContactRepository contactRepository;
 
     @PostMapping("/contact")
