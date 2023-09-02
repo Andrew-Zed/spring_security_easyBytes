@@ -13,6 +13,8 @@ public class AccountTransactions {
     @Id
     @Column(name = "transaction_id")
     private String transactionId;
+    @Column(name="account_number")
+    private long accountNumber;
     @Column(name = "account_id")
 
     private long accountId;
@@ -27,6 +29,11 @@ public class AccountTransactions {
     @Column(name = "transaction_amt")
     private int transactionAmt;
 
+    @Column(name = "closing_balance")
+    private int closingBalance;
+
+    @Column(name = "create_dt")
+    private String createDt;
 
     public String getTransactionId() {
         return transactionId;
@@ -34,6 +41,14 @@ public class AccountTransactions {
 
     public void setTransactionId(String transactionId) {
         this.transactionId = transactionId;
+    }
+
+    public long getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(long accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public long getAccountId() {
@@ -84,5 +99,19 @@ public class AccountTransactions {
         this.transactionAmt = transactionAmt;
     }
 
+    public int getClosingBalance() {
+        return closingBalance;
+    }
 
+    public void setClosingBalance(int closingBalance) {
+        this.closingBalance = closingBalance;
+    }
+
+    public String getCreateDt() {
+        return createDt;
+    }
+
+    public void setCreateDt(String createDt) {
+        this.createDt = createDt;
+    }
 }

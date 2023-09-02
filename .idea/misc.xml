@@ -6,6 +6,9 @@
       <list>
         <option value="$PROJECT_DIR$/springsecurity/pom.xml" />
         <option value="$PROJECT_DIR$/springsecurity4/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurity5/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecuritySection6/springsecurity6/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecuritySection7/pom.xml" />
       </list>
     </option>
   </component>

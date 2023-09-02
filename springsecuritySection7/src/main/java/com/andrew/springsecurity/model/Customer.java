@@ -1,8 +1,11 @@
 package com.andrew.springsecurity.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
+
+import java.util.Set;
 
 @Entity
 @Table(name = "customer")
@@ -17,11 +20,15 @@ public class Customer {
     private String email;
     @Column(name = "mobile_number")
     private String mobileNumber;
-//    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String pwd;
     private String role;
     @Column(name = "created_dt")
     private String createdDt;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+    private Set<Authority> authorities;
 
     public int getId() {
         return id;
@@ -77,5 +84,13 @@ public class Customer {
 
     public void setCreatedDt(String createdDt) {
         this.createdDt = createdDt;
+    }
+
+    public Set<Authority> getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(Set<Authority> authorities) {
+        this.authorities = authorities;
     }
 }
