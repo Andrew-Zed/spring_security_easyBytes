@@ -2,7 +2,6 @@ package com.andrew.springsecurity.controller;
 
 import com.andrew.springsecurity.model.AccountTransactions;
 import com.andrew.springsecurity.repositories.AccountTransactionsRepository;
-import com.andrew.springsecurity.repositories.AccountsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
